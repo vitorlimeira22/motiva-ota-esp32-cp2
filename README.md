@@ -14,7 +14,7 @@ Checkpoint 2 da disciplina ministrada pelo professor Marcelo Fernando Morgantini
 
 ## Links
 
-- Projeto Wokwi: __WOKWI_URL__
+- Projeto Wokwi: https://wokwi.com/projects/475874796669478913
 - Repositorio publico: https://github.com/vitorlimeira22/motiva-ota-esp32-cp2
 - Manifesto usado pelo Firmware 1.0: https://raw.githubusercontent.com/vitorlimeira22/motiva-ota-esp32-cp2/main/version.json
 
