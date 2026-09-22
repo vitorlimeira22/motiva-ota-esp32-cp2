@@ -1,0 +1,5 @@
+.arduino/
+build/
+*.elf
+*.map
+*.merged.bin

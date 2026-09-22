@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "author": "Equipe CCPX - Projeto Motiva",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp32",
+      "top": -15,
+      "left": -30,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "ledRgb",
+      "top": -22,
+      "left": 300,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rVermelho",
+      "top": -82,
+      "left": 185,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rVerde",
+      "top": -20,
+      "left": 185,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rAzul",
+      "top": 42,
+      "left": 185,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "titulo",
+      "top": -150,
+      "left": -38,
+      "attrs": {
+        "text": "PROJETO MOTIVA - ESP32 OTA",
+        "fontSize": "20",
+        "color": "#E6005C"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "legenda",
+      "top": 125,
+      "left": 245,
+      "attrs": {
+        "text": "FW 1.0: azul | FW 2.0: verde ou vermelho",
+        "fontSize": "13",
+        "color": "#333333"
+      }
+    }
+  ],
+  "connections": [
+    [ "esp32:D25", "rVermelho:1", "red", [] ],
+    [ "rVermelho:2", "ledRgb:R", "red", [] ],
+    [ "esp32:D26", "rVerde:1", "green", [] ],
+    [ "rVerde:2", "ledRgb:G", "green", [] ],
+    [ "esp32:D27", "rAzul:1", "blue", [] ],
+    [ "rAzul:2", "ledRgb:B", "blue", [] ],
+    [ "ledRgb:COM", "esp32:GND.1", "black", [] ],
+    [ "esp32:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp32:RX0", "$serialMonitor:TX", "", [] ]
+  ],
+  "dependencies": {}
+}
